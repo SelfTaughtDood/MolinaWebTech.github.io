@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:ital,wght@0,700;1,500&family=Outfit:wght@400;700&display=swap');
+
+:root {
+  --bgc: hsl(30, 38%, 92%);
+  --header-color: hsl(212, 21%, 14%);
+  --text-color: hsl(228, 12%, 48%);
+  --btn-color: hsl(158, 36%, 37%);
+  --card-color: hsl(0, 0%, 100%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bgc);
+
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+}
+
+.grid-card {
+  background-color: var(--card-color);
+  border-radius: 15px;
+  /* display: grid;
+  grid-template-rows: 1fr 1fr; */
+  margin-bottom: 1rem;
+  width: 350px;
+}
+
+.row-1 > .mobile{
+  border-radius: 15px 15px 0 0 ;
+  width: 100%;
+}
+
+.row-1 > .desktop {
+  display: none;
+}
+
+.row-2 {
+  margin: 1.5rem;
+}
+
+#title {
+  color: var(--text-color);
+  font-family: 'Montserrat';
+  font-weight: lighter;
+  padding-bottom: .5rem;
+  padding-top: 0;
+}
+
+#header {
+  font-family: 'Fraunces';
+  padding-bottom: 1rem;
+}
+
+#description {
+  color: var(--text-color);
+  font-family: 'Montserrat';
+  font-weight: lighter;
+  margin-bottom: 1rem;
+}
+
+#new-price {
+  color: var(--btn-color);
+  font-family: 'Fraunces';
+  font-size: 2rem;
+  font-weight: 700;
+  /* padding-right: 1rem; */
+}
+
+#old-price {
+  text-decoration-line: line-through;
+}
+
+button {
+  background-color: var(--btn-color);
+  border: none;
+  border-radius: 7px;
+  color: #fff;
+  display: block;
+  padding: .7rem;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+button:hover {
+  background-color: darkgreen;
+}
+
+button > img {
+  margin: 0;
+  padding-right: .5rem;
+}
+
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (orientation: landscape), (min-width: 992px) {
+  .grid-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 600px;
+  }
+
+  .row-1 > .mobile {
+    display: none;
+  }
+
+  .row-1 > .desktop {
+    border-radius: 15px 0 0 15px ;
+    display: flex;
+    width: 100%;
+  }
+}
